@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "a12727de1273b97b",
+    "type": "split",
+    "children": [
+      {
+        "id": "3faebbef29c1e224",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0985d392f92e085c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "spmm/tasks/nextjs/pages/_main.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "78c3b55e99f09063",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e758bc9ac6d818b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "061ea1eb71ebb436",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "82f25b080ad26165",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "10937d7ceeb2c0bd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "09baf245ef79d421",
+    "type": "split",
+    "children": [
+      {
+        "id": "323035ecdf95cc04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbac5f890bd46210",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "spmm/tasks/nextjs/pages/_main.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31cf1cf1f4de44aa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "spmm/tasks/nextjs/pages/_main.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6ff4b26dd7a4847",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1eb9b95855eacac4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "spmm/tasks/nextjs/pages/_main.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "061ea1eb71ebb436",
+  "lastOpenFiles": [
+    "spmm/tasks/nextjs/pages/events.md",
+    "spmm/tasks/nextjs/pages/_main.md",
+    "spmm/tasks/firebase/_main.md",
+    "spmm/about/_main.md",
+    "spmm/analysis/pages/login.canvas",
+    "spmm/analysis/pages/home.canvas",
+    "spmm/analysis/pages/faq.canvas",
+    "spmm/analysis/pages/events.canvas",
+    "spmm/analysis/pages/events-guide.canvas",
+    "spmm/analysis/pages/event.canvas",
+    "spmm/analysis/pages/edit-event.canvas",
+    "spmm/analysis/pages/edit-announcement.canvas",
+    "spmm/analysis/pages/donate.canvas",
+    "spmm/analysis/pages/create-event.canvas",
+    "spmm/analysis/technology-stack.md",
+    "spmm/analysis/pages",
+    "spmm/analysis/localization.md",
+    "spmm/analysis/_res",
+    "spmm/analysis/_questions.md",
+    "spmm/analysis/_main.md",
+    "spmm/analysis",
+    "spmm/about",
+    "spmm/tasks/nextjs/pages",
+    "spmm/tasks/nextjs/_main.md",
+    "spmm/tasks/nextjs",
+    "spmm/tasks/firebase",
+    "spmm/tasks",
+    "spmm",
+    "analysis/_questions.md",
+    "code/src/components/TestComponent.jsx",
+    "code/node_modules/@firebase/firestore/README.md",
+    "code/node_modules/@firebase/database/README.md",
+    "code/node_modules/@firebase/storage/README.md",
+    "code/node_modules/@firebase/database-compat/README.md",
+    "code/node_modules/protobufjs/README.md",
+    "code/node_modules/@firebase/firestore-compat/README.md",
+    "code/node_modules/@firebase/app-check/README.md",
+    "code/node_modules/undici/types/README.md",
+    "code/node_modules/undici/README.md",
+    "code/node_modules/@firebase/performance/README.md",
+    "code/node_modules/@firebase/component/README.md",
+    "code/node_modules/@firebase/app-check-compat/README.md",
+    "code/node_modules/@firebase/messaging-compat/README.md",
+    "code/node_modules/@firebase/remote-config-compat/README.md",
+    "code/node_modules/undici/docs/assets/lifecycle-diagram.png",
+    "code/node_modules/undici/docs/best-practices/writing-tests.md"
+  ]
+}

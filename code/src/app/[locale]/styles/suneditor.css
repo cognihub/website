@@ -1,0 +1,172 @@
+.sun-editor {
+    border-color: var(--input-border-color) !important;
+    background-color: var(--input-bg-color) !important;
+    border-radius: 4px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+}
+
+.se-toolbar {
+    background-color: var(--input-bg-color) !important;
+    outline: 0px sol var(--input-border-color) !important;
+    z-index: 5 !important;
+}
+
+.se-toolbar svg,
+.se-toolbar span {
+    color: var(--text-color);
+}
+
+.se-btn-module {
+    border: 0px !important;
+}
+
+.se-btn-select {
+    width: 120px !important;
+}
+
+.se-btn-select:hover span {
+    color: var(--negative-text-color) !important;
+}
+
+.se-list-layer {
+    background-color: var(--bg-color) !important;
+    border: 0px !important;
+}
+
+.se-btn-list {
+    color: var(--text-color) !important;
+}
+
+.se-btn-list:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--negative-text-color) !important;
+}
+
+.default_value {
+    background-color: var(--bg-color) !important;
+}
+
+.se-btn-primary,
+.se-btn._se_color_picker_remove {
+    background-color: var(--primary-color) !important;
+    color: var(--negative-text-color) !important;
+    border: 0px !important;
+}
+
+.se-btn-primary svg,
+.se-btn._se_color_picker_remove svg {
+    color: var(--negative-text-color) !important;
+}
+
+.active,
+.on {
+    background-color: var(--primary-color) !important;
+    color: var(--negative-text-color) !important;
+    outline: 0 none;
+}
+
+.active svg,
+.on svg {
+    background-color: var(--primary-color) !important;
+    color: var(--negative-text-color) !important;
+}
+
+a.on {
+    background-color: transparent !important;
+}
+
+.se-btn:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--negative-text-color) !important;
+}
+
+.se-btn:hover svg {
+    color: var(--negative-text-color) !important;
+}
+
+.sun-editor-editable {
+    background-color: var(--input-bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.se-shortcut,
+.se-shortcut-key {
+    color: white !important;
+}
+
+.se-btn-tool-size > span:nth-child(3) > span:nth-child(1),
+.se-btn-tool-format > span:nth-child(3) > span:nth-child(1) {
+    color: white !important;
+}
+
+.se-resizing-bar {
+    border-top: 0px !important;
+    background-color: var(--input-bg-color) !important;
+}
+
+.se-dialog-content {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.se-dialog-form label {
+    color: var(--text-color) !important;
+}
+
+.se-dialog input {
+    color: var(--text-color) !important;
+}
+
+.se-dialog-tabs {
+    border-bottom: 0px !important;
+}
+
+.se-dialog-header {
+    border-bottom: 0px !important;
+}
+
+.se-dialog-tabs button {
+    border-right: 0px !important;
+}
+
+.se-dialog-body > div {
+    border-bottom: 0px !important;
+}
+
+.se-dialog-tabs {
+    margin-left: 15px !important;
+    margin-bottom: 10px !important;
+}
+
+.se-dialog-form-files {
+    background-color: var(--input-bg-color);
+}
+
+.se-dialog-form-files input {
+    border: 0px !important;
+}
+
+.se-dialog-footer {
+    border-top: 0px !important;
+}
+
+.se-dialog-form-footer label,
+.se-dialog-footer label {
+    color: var(--text-color) !important;
+}
+
+.se-dialog-btn-revert,
+.se-file-remove,
+.se-dialog-files-edge-button {
+    border: 0px !important;
+}
+
+.se-dialog-btn-revert svg,
+.se-file-remove svg,
+.se-dialog-files-edge-button svg{
+    color: var(--text-color) !important;
+}
+
+.sun-editor input:focus {
+    box-shadow: 0 0 0 .2rem var(--input-bg-color) !important;
+}

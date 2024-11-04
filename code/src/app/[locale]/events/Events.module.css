@@ -1,0 +1,17 @@
+.EventsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.EventsContainer > p {
+    color: rgb(155, 155, 155)
+}
+
+.EventsResults {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px
+}

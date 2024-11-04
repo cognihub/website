@@ -1,0 +1,193 @@
+.IntroductionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.IntroductionContainer > a {
+    margin-top: 10px;
+    font-size: 19px;
+    z-index: 1;
+}
+
+.GoalsAndBrainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75vh;
+    width: 100%;
+}
+
+.GoalsContainer {
+    width: 50%;
+}
+
+.GoalsText > p {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.BrainContainer {
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.Brain {
+    width: 420px;
+    height: 450px;
+}
+
+.Brain:hover svg {
+    opacity: 0.5;
+}
+
+.Brain .BrainPart {
+    position: absolute;
+    cursor: pointer;
+}
+
+.Brain .BrainPart svg {
+    width: 200px;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+.Brain .BrainPart:hover svg,
+.Brain .BrainPart.active svg {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.Brain .FrontLobe {
+    fill: var(--front-lobe-color);
+    top: 0;
+    left: 0;
+}
+
+.Brain .Cerebellum {
+    fill: var(--cerebellum-color);
+    top: 235px;
+    left: 215px;
+}
+
+.Brain .Cerebellum svg {
+    width: 160px;
+}
+
+.Brain .OccipitalLobe {
+    fill: var(--occipital-lobe-color);
+    top: 100px;
+    left: 280px;
+}
+
+.Brain .OccipitalLobe svg {
+    width: 140px;
+}
+
+.Brain .ParietalLobe {
+    fill: var(--parietal-lobe-color);
+    top: 0;
+    left: 180px;
+}
+
+.Brain .TemporalLobe {
+    fill: var(--temporal-lobe-color);
+    top: 140px;
+    left: 95px;
+}
+
+.Brain .TemporalLobe svg {
+    width: 220px;
+}
+
+@media screen and (max-width: 1400px) {
+
+    .GoalsText > h1 {
+        font-size: 27px;
+    }
+
+    .GoalsText > p {
+        font-size: 20px;
+    }
+
+    .BrainContainer {
+        margin-right: 0px;
+    }
+
+    .Brain {
+        height: 280px;
+        width: 340px;
+    }
+
+    .Brain .ParietalLobe {
+        top: 0;
+        left: 140px;
+    }
+
+    .Brain .OccipitalLobe {
+        top: 75px;
+        left: 220px;
+    }
+
+    .Brain .TemporalLobe {
+        top: 110px;
+        left: 75px;
+    }
+
+    .Brain .Cerebellum {
+        top: 180px;
+        left: 175px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .GoalsAndBrainContainer {
+        padding-top: 30px;
+        flex-direction: column-reverse;
+        justify-content: start;
+        min-height: initial;
+        height: 550px;
+    }
+
+    .GoalsContainer {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .GoalsText > h1 {
+        font-size: 24px;
+    }
+
+    .GoalsText > p {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Brain {
+        height: 250px;
+        width: 300px;
+    }
+
+    .Brain .ParietalLobe {
+        top: 0;
+        left: 120px;
+    }
+
+    .Brain .OccipitalLobe {
+        top: 65px;
+        left: 185px;
+    }
+
+    .Brain .TemporalLobe {
+        top: 93px;
+        left: 65px;
+    }
+
+    .Brain .Cerebellum {
+        top: 155px;
+        left: 140px;
+    }
+}

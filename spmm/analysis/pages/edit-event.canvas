@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"4363770b788590ed","type":"text","text":"# Edit Event Page\n\nDoes the suneditor support server components? Or will it be a client side component? \nSince both this and [[create-announcement.canvas|create announcement]] page are very similar consider introducing a route handler to further experiment with NextJS features ","x":-370,"y":-270,"width":740,"height":540,"color":"3"}
+	],
+	"edges":[]
+}

@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"6a556f12c7a226a4","type":"text","text":"Events\n\n","x":-300,"y":-400,"width":540,"height":140,"color":"6"},
+		{"id":"6b2da2049c9bd73b","type":"text","text":"Announcement\n\n","x":-300,"y":-240,"width":540,"height":140,"color":"6"}
+	],
+	"edges":[]
+}

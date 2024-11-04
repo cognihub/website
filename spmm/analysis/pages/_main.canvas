@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"251a2959729b4f6d","type":"text","text":"Server Component","x":-60,"y":-1180,"width":360,"height":334,"color":"6"},
+		{"id":"ec9e654cdc9d8c58","type":"text","text":"Client Component","x":320,"y":-1180,"width":300,"height":158,"color":"3"},
+		{"id":"8984649b0d759f89","type":"text","text":"Static Component","x":320,"y":-1004,"width":300,"height":158,"color":"4"},
+		{"id":"866aff46017ff9a1","type":"text","text":"Footer","x":-60,"y":-820,"width":680,"height":60,"color":"4"},
+		{"id":"ea9ceda811d0b425","type":"text","text":"Navigation bar","x":-60,"y":-1260,"width":680,"height":60,"color":"4"},
+		{"id":"23a31aa855e200a5","type":"file","file":"tasks/firebase/_main.md","x":-520,"y":-1186,"width":300,"height":347,"color":"2"},
+		{"id":"81c0384371237483","type":"text","text":"Firestore","x":-480,"y":-1108,"width":220,"height":60},
+		{"id":"0b452b1b633e8298","type":"text","text":"Storage","x":-480,"y":-1018,"width":220,"height":60},
+		{"id":"fe97ec760741e4c3","type":"text","text":"Authentication","x":-480,"y":-932,"width":220,"height":60}
+	],
+	"edges":[
+		{"id":"e781101611ab1e00","fromNode":"251a2959729b4f6d","fromSide":"left","toNode":"23a31aa855e200a5","toSide":"right"}
+	]
+}

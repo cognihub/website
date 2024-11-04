@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"632dc29d87268fbb","type":"text","text":"# Events Page\n\nWill work with query params and server actions","x":-320,"y":-420,"width":620,"height":420,"color":"6"}
+	],
+	"edges":[]
+}

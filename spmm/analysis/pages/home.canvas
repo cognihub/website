@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"152da024e5cc5f53","type":"text","text":"Landing","x":-384,"y":-560,"width":620,"height":180,"color":"3"},
+		{"id":"e2762cdda7fdb917","type":"text","text":"Banners","x":-384,"y":-360,"width":620,"height":180,"color":"4"},
+		{"id":"9566a655440f2c37","type":"text","text":"Events\n\n","x":-384,"y":-160,"width":620,"height":180,"color":"6"},
+		{"id":"2015f31d00b3128e","type":"text","text":"Interact","x":-384,"y":40,"width":620,"height":180,"color":"4"},
+		{"id":"5b204302b4cbc737","type":"text","text":"Announcements\n\n","x":-384,"y":240,"width":620,"height":180,"color":"6"},
+		{"id":"ab2bcb5a2eca712a","type":"text","text":"Social","x":-384,"y":440,"width":620,"height":180,"color":"4"},
+		{"id":"34d2f9a8edbd875e","type":"text","text":"Partners","x":-384,"y":640,"width":620,"height":180,"color":"4"}
+	],
+	"edges":[]
+}

@@ -1,0 +1,109 @@
+.CooperatePageContainer>* {
+    margin-top: 20px;
+}
+
+.CooperatePageContainer>ol>a>button {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.CooperatePageContainer>ol>li {
+    margin-top: 10px;
+}
+
+.CooperateOptionsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Students Students Students"
+        "Experts Enterprise Organizations";
+    width: 100%;
+    min-height: 70vh;
+}
+
+.CooperateOptionsContainer h3 {
+    opacity: 87%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.CooperateOptionsContainer p {
+    opacity: 60%;
+}
+
+.CooperateOptionsContainer ul {
+    margin-left: 10px;
+    list-style-type: "◦";
+}
+
+.CooperateOptionsContainer ul > li {
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.CooperateOptionsContainer > div {
+    height: fit-content;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.Students {
+    grid-area: Students;
+    background-color: var(--cooperate-card-1);
+}
+
+.Students ul {
+    color: var(--cooperate-card-1-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Experts {
+    grid-area: Experts;
+    background-color: var(--cooperate-card-2);
+}
+
+.Experts ul {
+    color: var(--cooperate-card-2-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Enterprise {
+    grid-area: Enterprise;
+    background-color: var(--cooperate-card-3);
+}
+
+.Enterprise ul {
+    color: var(--cooperate-card-3-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Organizations {
+    grid-area: Organizations;
+    background-color: var(--cooperate-card-4);
+}
+
+.Organizations ul {
+    color: var(--cooperate-card-4-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.CardHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+    .CooperateOptionsContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 70vh;
+    }
+}

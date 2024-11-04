@@ -1,0 +1,20 @@
+.SocialContainer {
+    text-align: center;
+}
+
+.SocialContainer > p {
+    font-size: 21px;
+}
+
+.SocialContainer > h3 {
+    margin-top: 10px;
+}
+.SocialIconsContainer {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

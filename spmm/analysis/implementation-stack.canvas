@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"e8692a65c5a3b7c9","type":"file","file":"tasks/firebase/_main.md","x":-1180,"y":-1294,"width":300,"height":347,"color":"2"},
+		{"id":"ba6fc5bf34b61b26","type":"text","text":"Firestore","x":-1140,"y":-1216,"width":220,"height":60},
+		{"id":"50cb25e941626985","type":"text","text":"Storage","x":-1140,"y":-1126,"width":220,"height":60},
+		{"id":"ef584450ac42a125","type":"text","text":"Authentication","x":-1140,"y":-1040,"width":220,"height":60},
+		{"id":"0914498a53169b6f","type":"file","file":"tasks/nextjs/pages/_main.md","x":-400,"y":-1409,"width":260,"height":577,"color":"6"},
+		{"id":"aa53472eb0a82bd6","type":"file","file":"tasks/nextjs/_main.md","x":-740,"y":-1164,"width":180,"height":87,"color":"4"}
+	],
+	"edges":[
+		{"id":"5e5eb7305ab07ed6","fromNode":"aa53472eb0a82bd6","fromSide":"right","toNode":"0914498a53169b6f","toSide":"left"},
+		{"id":"0a298e470c6a26eb","fromNode":"aa53472eb0a82bd6","fromSide":"left","toNode":"e8692a65c5a3b7c9","toSide":"right"}
+	]
+}

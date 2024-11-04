@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"9aa6c4494323f173","x":-300,"y":-320,"width":660,"height":500,"color":"6","type":"text","text":"# Login Page\n\nWill the form be server action? What's more safe?"}
+	],
+	"edges":[]
+}
