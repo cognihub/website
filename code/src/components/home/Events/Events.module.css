@@ -23,13 +23,13 @@
 .EventsContainer {
     width: 100%;
     display: flex;
+    gap: var(--flex-gap-xl);
     justify-content: space-between;
-    gap: 30px;
     flex-wrap: wrap;
 }
 
 .EventCard {
-    width: 38vw;
+    width: calc(50% - calc(var(--flex-gap-xl)/2));
     height: 240px;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,8 @@
     width: 40%;
 }
 
-.EventPreview > img {
+.EventPreview img {
+    object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
@@ -102,10 +103,14 @@
 @media (max-width: 1400px) {
     .EventCard {
         flex-direction: column;
-        width: 24vw;
+        width: 30%;
         min-width: 260px;
         min-height: 500px;
         padding-bottom: 25px;
+    }
+
+    .EventsContainer {
+        gap: calc(var(--flex-gap-xl)/2);
     }
 
     .EventsContainer > :last-child {
@@ -133,9 +138,9 @@
 @media (max-width: 1110px) {
     .EventCard {
         flex-direction: row;
-        width: 80vw;
-        min-height: initial;
         height: 300px;
+        width: 100%;
+        min-height: initial;
         padding-bottom: 0px;
     }
 
@@ -170,7 +175,7 @@
     .EventCard {
         flex-direction: column;
         width: 70vw;
-        max-width: 300px;
+        max-width: 350px;
         height: 500px;
     }
 

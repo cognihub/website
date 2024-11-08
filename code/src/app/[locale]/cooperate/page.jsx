@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { unstable_setRequestLocale } from 'next-intl/server'
-import config from '@/lib/config.json'
+import config from '@/lib/config.js'
 
 import styles from './Cooperate.module.css'
 

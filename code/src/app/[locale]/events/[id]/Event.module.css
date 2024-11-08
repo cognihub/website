@@ -1,11 +1,13 @@
 .EventPageContainer {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    gap: var(--flex-gap-xl);
+    align-items: center;
+    min-height: 70vh;
 }
 
 .EventInfoColumn {
-    width: 27%;
+    width: 380px;
     margin-top: 2px;
     border-radius: 15px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -101,6 +103,7 @@
 @media screen and (max-width: 1300px) {
     .EventPageContainer {
         flex-direction: column-reverse;
+        gap: 0px;
     }
 
     .ImgContainer > img {
@@ -117,7 +120,7 @@
     }
 
     .ImgContainer {
-        width: 35%;
+        width: 400px;
         height: 100%;
     }
 
@@ -138,7 +141,6 @@
     }
 
     .ImgContainer {
-        width: 45%;
         height: 100%;
     }
 
@@ -153,8 +155,7 @@
 
 @media screen and (max-width: 750px) {
     .EventInfoColumn {
-        margin-top: 60px;
-        width: 100%;
+        width: 400px;
         flex-direction: row;
         height: 500px;
     }
@@ -177,5 +178,4 @@
     .EventMetadata {
         width: 100%;
     }
-
 }

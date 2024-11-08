@@ -28,7 +28,7 @@ export default async function Page({ params }) {
         <div className={styles.EventPageContainer}>
             <div className={styles.EventInfoColumn}>
                 <div className={styles.ImgContainer}>
-                    <Image src={'/test.png'} layout='fill' alt="Event's banner" />
+                    <Image src={image} fill alt="Event's banner" />
                 </div>
                 <div className={styles.EventMetadata}>
                     <div className={styles.MetadataRow}>

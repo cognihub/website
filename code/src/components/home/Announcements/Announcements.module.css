@@ -19,3 +19,14 @@
 .Announcement > p {
    opacity: 67%;
 }
+
+@media (width <= 600px) {
+   .AnnouncementsContainer {
+      flex-direction: column;
+   }
+
+   .AnnouncementsContainer > h3 {
+      font-size: 24px;
+   }
+
+}

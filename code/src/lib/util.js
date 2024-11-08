@@ -5,7 +5,7 @@ import { Timestamp } from 'firebase/firestore'
 export function timestampDateToString(timestampDate) {
     const date = new Date(timestampDate.seconds * 1000)
     return (
-        `${date.getDate()}/${(date.getMonth() + 1)}-${date.getFullYear()}`
+        `${date.getDate()}/${(date.getMonth() + 1)}/${date.getFullYear()}`
     )
 }
 

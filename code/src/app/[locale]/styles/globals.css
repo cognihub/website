@@ -1,5 +1,6 @@
 html,
 html[data-theme="light"] {
+   --flex-gap-xl: 40px;
    --bg-color: white;
 
    --input-bg-color: white;
@@ -45,6 +46,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
+   --flex-gap-xl: 40px;
    --bg-color: #121212;
 
    --input-bg-color: #1d1e1f;
@@ -119,9 +121,9 @@ html[data-theme="dark"] .rmsc {
    outline: none;
 }
 
-html,
 body {
-   max-width: 90%;
+   max-width: 1536px;
+   width: 80%;
    margin: 0px auto;
    overflow-x: hidden;
    color: var(--text-color);
@@ -151,11 +153,6 @@ main {
    margin: 20px;
 }
 
-@media (width <= 600px) {
-   body {
-      max-width: 100%;
-   }
-}
 
 ol {
    counter-reset: list-counter;
@@ -232,4 +229,17 @@ td svg {
 .navButton {
    font-size: 22px;
    cursor: pointer;
+}
+
+@media (width <= 1400px) {
+   body {
+      width: 90%;
+      max-width: 100%;
+   }
+}
+
+@media (width <= 600px) {
+   body {
+      width: 100%;
+   }
 }

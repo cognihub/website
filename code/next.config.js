@@ -7,11 +7,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'singlecolorimage.com',
+        hostname: 'firebasestorage.googleapis.com',
         port: '',
-        pathname: '/get/**',
+        pathname: '/**',
       },
     ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true
   },
   async headers() {
     return [

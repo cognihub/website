@@ -8,14 +8,11 @@ import styles from './Events.module.css'
 
 function EventCard({ event: { id, title, image, date, category, description, sciences } }) {
     return (
-        <div className={styles.EventCard}>
+        <div key={id} className={styles.EventCard}>
             <div className={styles.EventPreview}>
-                <Image
-                    src={'/test.png'}
-                    layout='fill'
-                    objectFit='cover'
-                    alt="Event's banner"
-                />
+                <Link href={`/events?categories=${category}`}>
+                    <Image src={image} fill alt="Event's banner" sizes='auto'/>
+                </Link>
             </div>
             <div className={styles.EventData}>
                 <Link href={`/events/${id}`}>
@@ -44,7 +41,7 @@ export default async function Events() {
                 <p>↴</p>
             </div>
             <div className={styles.EventsContainer}>
-                {events.map(event => <EventCard event={event} />)}
+                {events.map(event => <EventCard key={event.id} event={event} />)}
             </div>
             <h3>
                 <Link href='/events'>

@@ -10,8 +10,7 @@ export function EventBanner({ src }) {
         <div className={styles.EventBannerImgContainer}>
             <Image
                 src={src}
-                layout='fill'
-                objectFit='cover'
+                fill
                 alt="Event's banner"
                 style={{ borderTopLeftRadius: 15, borderTopRightRadius: 15 }}
             />
@@ -23,7 +22,7 @@ export default function EventCard({ event: { id, title, image, date, category, d
     return (
         <div className={styles.EventCard} key={id}>
             <Link href={`/events/${id}`}>
-                <EventBanner src='/test.png' />
+                <EventBanner src={image} />
             </Link>
             <div className={styles.CardInfoContainer}>
                 <Link href={`/events/${id}`}>

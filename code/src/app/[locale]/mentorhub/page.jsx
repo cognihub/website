@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import config from '@/lib/config.json'
+import config from '@/lib/config.js'
 import { useTranslations } from 'next-intl'
 
 import styles from './MentorHub.module.css'

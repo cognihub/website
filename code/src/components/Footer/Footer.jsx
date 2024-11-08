@@ -6,7 +6,7 @@ import styles from './Footer.module.css'
 export default function Footer() {
     return (
         <footer className={styles.FooterContainer}>
-            <p>Coded with </p>
+            <p><Link href='https://egaraganis.dev/'>Coded</Link> with </p>
             <Link href='https://egaraganis.dev/' target='_blank' rel='noreferrer'>
                 <Image
                     className={styles.zoom}
