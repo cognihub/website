@@ -1,3 +1,7 @@
+# Cognihub's Website Source Code
+
+Welcome to Cognihub's website implementation. This website was built with Nextjs latest app router features, add captures... 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
