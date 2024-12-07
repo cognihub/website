@@ -1,0 +1,198 @@
+.EventsInHomePageContainer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.EventsInHomePageContainer > h3 {
+    text-align: end;
+}
+
+.RecentEventsTextContainer {
+    display: flex;
+    gap: 7px;
+    font-size: 17px;
+}
+
+.RecentEventsTextContainer > p {
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.EventsContainer {
+    width: 100%;
+    display: flex;
+    gap: var(--flex-gap-xl);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.EventCard {
+    width: calc(50% - calc(var(--flex-gap-xl)/2));
+    height: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+}
+
+.EventPreview {
+    position: relative;
+    height: 100%;
+    width: 40%;
+}
+
+.EventPreview img {
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.EventData {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.EventData > a > h1 {
+    opacity: 87%;
+    color: var(--text-color);
+}
+
+.EventData > a > h6 {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.EventData > p {
+    color: var(--text-color);
+    opacity: 60%;
+}
+
+.EventData > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.EventData > div > p {
+    color: var(--text-color);
+    opacity: 60%;
+}
+
+.EventData > div svg {
+    color: var(--primary-color);
+    opacity: 87%;
+}
+
+.BottomCardContainer > p {
+    color: var(--text-color);
+    opacity: 60%;
+}
+
+.BottomCardContainer svg {
+    color: var(--secondary-color);
+    opacity: 87%;
+}
+
+@media (max-width: 1400px) {
+    .EventCard {
+        flex-direction: column;
+        width: 30%;
+        min-width: 260px;
+        min-height: 500px;
+        padding-bottom: 25px;
+    }
+
+    .EventsContainer {
+        gap: calc(var(--flex-gap-xl)/2);
+    }
+
+    .EventsContainer > :last-child {
+        display: none;
+    }
+
+    .EventPreview {
+        height: 40%;
+        width: 100%;
+    }
+
+    .EventPreview img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .EventData {
+        margin-top: 10px;
+        height: 60%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1110px) {
+    .EventCard {
+        flex-direction: row;
+        height: 300px;
+        width: 100%;
+        min-height: initial;
+        padding-bottom: 0px;
+    }
+
+    .EventPreview {
+        height: 100%;
+        width: 40%;
+    }
+
+    .EventPreview img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .EventData {
+        padding-right: 20px;
+        width: 60%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 600px) {
+    .EventsInHomePageContainer {
+        align-items: center;
+    }
+
+    .EventsContainer {
+        justify-content: center;
+    }
+
+    .EventCard {
+        flex-direction: column;
+        width: 82vw;
+        max-width: 350px;
+        height: 500px;
+    }
+
+    .EventPreview {
+        height: 40%;
+        width: 100%;
+    }
+
+    .EventPreview img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .EventData {
+        margin-top: 10px;
+        height: 60%;
+        width: 100%;
+    }
+}

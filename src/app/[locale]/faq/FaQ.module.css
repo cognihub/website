@@ -1,0 +1,43 @@
+.FaQPageContainer {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FaQPageContainer > h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.MessageContainer {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.MessageContainer > p {
+    background-color: var(--primary-color);
+    color: var(--negative-text-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.MessageContainer svg {
+    color: var(--primary-color);
+    min-width: 30px;
+}
+
+.AnswerContainer {
+    margin-bottom: 50px;
+    flex-direction: row-reverse;
+}
+
+.AnswerContainer > p {
+    background-color: #f0e9f0;
+    color: black;
+    margin-right: 20px;
+}

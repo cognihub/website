@@ -1,0 +1,110 @@
+.MentorHubContainer > p {
+    margin-bottom: 20px;
+}
+
+.MentorHubContainer > h2 {
+    margin-bottom: 20px;
+}
+
+.MentorsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.MentorContainer {
+    max-width: 48%;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    background-color: var(--mentor-bg-card-color);
+}
+
+.MentorImgContainer {
+    margin-top: 30px;
+    position: relative;
+    width: 25%;
+    height: 160px;
+
+}
+
+.MentorImgContainer img {
+    object-fit: contain;
+    object-position: left top;
+}
+
+.MentorInfoContainer {
+    width: 70%;
+    padding: 20px;
+}
+
+.MentorInfoContainer > button {
+    margin-top: 20px;
+}
+
+.MentorTitle {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--primary-color);;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+    .MentorContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 47%;
+    }
+
+    .MentorImgContainer {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .MentorImgContainer img {
+        object-position: center top;
+    }
+
+    .MentorInfoContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 874px) {
+    .MentorContainer {
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .MentorImgContainer {
+        width: 25%;
+    }
+
+    .MentorImgContainer img {
+        object-fit: contain;
+        object-position: top center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .MentorContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .MentorImgContainer {
+        width: 100%;
+    }
+
+}

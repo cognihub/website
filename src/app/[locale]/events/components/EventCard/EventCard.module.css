@@ -1,0 +1,63 @@
+.EventCard {
+   background-color: var(--card-bg-color);
+   box-shadow: var(--shadow);
+   width: 360px;
+   min-height: 440px;
+   border-radius: 15px;
+   position: relative;
+}
+
+.CardInfoContainer {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+}
+
+.CardInfoContainer > a > h1 {
+   opacity: 87%;
+   color: var(--text-color);
+   font-size: 20px;
+}
+
+.CardInfoContainer > a > h6 {
+   font-size: 15px;
+   font-weight: bold;
+   color: var(--primary-color);
+}
+
+.CardInfoContainer > p {
+   opacity: 60%;
+}
+
+.BottomCardContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: absolute;
+   bottom: 10px;
+   left: 10px;
+   right: 10px;
+}
+
+.BottomCardContainer > p {
+   color: var(--text-color);
+   opacity: 60%;
+}
+
+.BottomCardContainer svg {
+   color: var(--primary-color);
+   opacity: 87%;
+}
+
+.EventBannerImgContainer {
+   position: relative;
+   height: 200px;
+}
+
+@media (max-width: 600px) {
+   .EventCard {
+      width: inherit;
+      min-height: 520px;
+   }
+}

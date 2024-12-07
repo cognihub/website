@@ -1,0 +1,32 @@
+.AnnouncementsContainer {
+   margin-top: 100px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 30px;
+}
+
+.Announcement {
+   width: 330px;
+}
+
+.Announcement > h4 {
+   opacity: 80%;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+.Announcement > p {
+   opacity: 67%;
+}
+
+@media (width <= 600px) {
+   .AnnouncementsContainer {
+      flex-direction: column;
+   }
+
+   .AnnouncementsContainer > h3 {
+      font-size: 24px;
+   }
+
+}

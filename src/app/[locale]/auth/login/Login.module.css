@@ -1,0 +1,32 @@
+.LoginPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap: 10px;
+}
+
+.LoginPageContainer > form {
+    margin-top: 20px;
+    width: 24vw;
+}
+
+.LoginPageContainer > form > button {
+    width: 250px;
+}
+
+.LoginPageContainer > form > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .LoginPageContainer > p {
+        width: 80vw;
+    }
+
+    .LoginPageContainer > form {
+        width: 80vw;
+    }
+}

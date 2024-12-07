@@ -1,0 +1,25 @@
+.AdminPageHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AdminPageContainer {
+    display: flex;
+    gap: 50px;
+}
+
+.AdminPageContainer h3 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    margin-left: 5px;
+}
+
+.AdminPageHeader > div {
+    display: flex;
+    gap: 25px;
+}
+
+.AdminPageHeader svg {
+    color: var(--primary-color);
+    cursor: pointer;
+}

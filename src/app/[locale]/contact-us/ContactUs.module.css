@@ -1,0 +1,42 @@
+.CommunicationPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    gap: 10px;
+}
+
+.CommunicationPageContainer > p {
+    margin-top: 20px;
+    width: 50vw;
+}
+
+.CommunicationPageContainer > form {
+    margin-top: 20px;
+    width: 50vw;
+}
+
+.NameAndEmailContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.NameAndEmailContainer > div {
+    width: 48%;
+}
+
+.CommunicationPageContainer > form > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .CommunicationPageContainer > p {
+        width: 80vw;
+    }
+
+    .CommunicationPageContainer > form {
+        width: 80vw;
+    }
+}

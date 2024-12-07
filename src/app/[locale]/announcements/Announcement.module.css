@@ -1,0 +1,25 @@
+.AnnouncementPageContainer {
+    margin-top: 50px;
+    min-height: 70vh;
+}
+
+.AnnouncementContainer > h2 {
+    font-size: large;
+    opacity: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.AnnouncementContainer > ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: var(--primary-color);
+}
+
+.Divider {
+    margin-top: 20px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--input-border-color);
+}

@@ -1,0 +1,257 @@
+.IntroductionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.IntroductionContainer > a {
+    margin-top: 10px;
+    font-size: 19px;
+    z-index: 1;
+}
+
+.GoalsAndBrainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75vh;
+    width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.GoalsContainer {
+    width: 50%;
+}
+
+.GoalsText > p {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.BrainContainer {
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.Brain {
+    width: 420px;
+    height: 450px;
+}
+
+.Brain:hover svg {
+    opacity: 0.5;
+}
+
+.Brain .BrainPart {
+    position: absolute;
+    cursor: pointer;
+}
+
+.Brain .BrainPart svg {
+    width: 200px;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+.Brain .BrainPart:hover svg,
+.Brain .BrainPart.active svg {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.Brain .FrontLobe {
+    fill: var(--front-lobe-color);
+    top: 0;
+    left: 0;
+}
+
+.Brain .ParietalLobe {
+    fill: var(--parietal-lobe-color);
+    top: 0px;
+    left: 183px;
+}
+
+.Brain .OccipitalLobe {
+    fill: var(--occipital-lobe-color);
+    top: 100px;
+    left: 280px;
+}
+
+.Brain .OccipitalLobe svg {
+    width: 140px;
+}
+
+.Brain .TemporalLobe {
+    fill: var(--temporal-lobe-color);
+    top: 138px;
+    left: 95px;
+}
+
+.Brain .TemporalLobe svg {
+    width: 225px;
+}
+
+.Brain .Cerebellum {
+    fill: var(--cerebellum-color);
+    top: 234px;
+    left: 215px;
+}
+
+.Brain .Cerebellum svg {
+    width: 160px;
+}
+
+@media screen and (max-width: 1400px) {
+    .GoalsText > h1 {
+        font-size: 27px;
+    }
+
+    .GoalsText > p {
+        font-size: 20px;
+    }
+
+    .BrainContainer {
+        margin-right: 0px;
+    }
+
+    .Brain {
+        height: 280px;
+        width: 340px;
+    }
+
+    .Brain .ParietalLobe {
+        top: 0;
+        left: 140px;
+    }
+
+    .Brain .OccipitalLobe {
+        top: 73px;
+        left: 215px;
+    }
+
+    .Brain .TemporalLobe {
+        top: 105px;
+        left: 75px;
+    }
+
+    .Brain .Cerebellum {
+        top: 175px;
+        left: 170px;
+    }
+
+    .Brain .FrontLobe svg {
+        width: 152px;
+    }
+
+    .Brain .ParietalLobe svg {
+        width: 150px;
+    }
+
+    .Brain .OccipitalLobe svg {
+        width: 105px;
+    }
+
+    .Brain .TemporalLobe svg {
+        width: 168px;
+    }
+
+    .Brain .Cerebellum svg {
+        width: 120px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .GoalsAndBrainContainer {
+        padding-top: 30px;
+        flex-direction: column-reverse;
+        justify-content: start;
+        min-height: initial;
+        margin-bottom: 20px;
+    }
+
+    .GoalsContainer {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .GoalsText > h1 {
+        font-size: 24px;
+    }
+
+    .GoalsText > p {
+        font-size: 19px;
+    }
+
+    .Brain .FrontLobe svg {
+        width: 150px;
+    }
+
+    .Brain .ParietalLobe svg {
+        width: 150px;
+    }
+
+    .Brain .OccipitalLobe svg {
+        width: 105px;
+    }
+
+    .Brain .TemporalLobe svg {
+        width: 165px;
+    }
+
+    .Brain .Cerebellum svg {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Brain {
+        height: 250px;
+        width: 300px;
+    }
+
+    .Brain .ParietalLobe {
+        top: 0;
+        left: 120px;
+    }
+
+    .Brain .OccipitalLobe {
+        top: 65px;
+        left: 185px;
+    }
+
+    .Brain .TemporalLobe {
+        top: 90px;
+        left: 65px;
+    }
+
+    .Brain .Cerebellum {
+        top: 152px;
+        left: 145px;
+    }
+
+    .Brain .FrontLobe svg {
+        width: 130px;
+    }
+
+    .Brain .ParietalLobe svg {
+        width: 130px;
+    }
+
+    .Brain .OccipitalLobe svg {
+        width: 90px;
+    }
+
+    .Brain .TemporalLobe svg {
+        width: 145px;
+    }
+
+    .Brain .Cerebellum svg {
+        width: 100px;
+    }
+
+}

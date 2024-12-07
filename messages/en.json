@@ -1,0 +1,15 @@
+{
+    "Navbar": {
+        "about": "About us",
+        "events": "Events",
+        "mentorhub": "MentorHub 🔥",
+        "become-member": "Become a member",
+        "cooperate": "Cooperate",
+        "contact-us": "Contact us",
+        "faq": "FaQ"
+    },
+    "NotFound": {
+        "text": "not found",
+        "back": "Back to home page"
+    }
+}

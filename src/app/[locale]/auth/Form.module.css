@@ -1,0 +1,63 @@
+.FormPageContainer > h2 {
+    margin-bottom: 20px;
+}
+
+.FormContainer {
+    display: flex;
+    gap: 40px;
+}
+
+.BasicInfoColumn {
+    width: 30%;
+}
+
+.BasicInfoColumn input,
+.BasicInfoColumn textarea,
+.BasicInfoColumn select {
+    margin-bottom: 15px;
+}
+
+.EventBannerFormContainer {
+    margin-bottom: 10px;
+}
+
+.EventBannerFormContainer > img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.EventBannerFormContainer > p {
+    margin-top: 0px;
+    font-size: 14px;
+    color: var(--primary-color);;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ContentColumn {
+    width: 70%;
+    height: 100%;
+}
+
+.MultiSelect {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.MultiSelect svg {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .FormContainer {
+        flex-direction: column;
+    }
+
+    .BasicInfoColumn {
+        width: 100%;
+    }
+
+    .ContentColumn {
+        width: 100%;
+    }
+}

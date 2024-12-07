@@ -1,0 +1,56 @@
+.HelpUsContainer > h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.HelpUsContainer > p {
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.CardsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--flex-gap-xl)
+}
+
+.HelpUsCard {
+    width: 16vw;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 270px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.HelpUsCard:nth-of-type(1) {
+    background-color: var(--cooperate-card-1);
+}
+
+.HelpUsCard:nth-of-type(2) {
+    background-color: var(--cooperate-card-2);
+}
+
+.HelpUsCard:nth-of-type(3) {
+    background-color: var(--cooperate-card-3);
+}
+
+.HelpUsCard:nth-of-type(4) {
+    background-color: var(--cooperate-card-4);
+}
+
+.HelpUsCard > div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.HelpUsShortInfoContainer {
+    margin-top: 30px;
+}

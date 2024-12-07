@@ -1,0 +1,13 @@
+.PartnersContainer {
+   text-align: center;
+}
+
+.PartnersIconsContainer {
+   margin-top: 150px;
+   margin-bottom: -70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}

@@ -1,0 +1,9 @@
+.LogoContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+.LogoContainer > h4 {
+    font-weight: 500;
+}

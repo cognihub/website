@@ -1,0 +1,38 @@
+{
+   "name": "cognisite",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint --fix"
+   },
+   "dependencies": {
+      "@emailjs/browser": "^4.4.1",
+      "@iconify/react": "^5.0.1",
+      "file-saver": "^2.0.5",
+      "firebase": "^10.12.2",
+      "html-react-parser": "^5.1.12",
+      "isomorphic-dompurify": "^2.14.0",
+      "jose": "^5.6.3",
+      "jszip": "^3.10.1",
+      "next": "14.2.4",
+      "next-intl": "latest",
+      "react": "^18",
+      "react-dom": "^18",
+      "react-multi-select-component": "^4.3.4",
+      "react-toastify": "^10.0.6",
+      "react-tsparticles": "^2.9.3",
+      "suneditor": "^2.46.3",
+      "suneditor-react": "^3.6.1",
+      "tsparticles": "^2.9.3",
+      "uuid": "^10.0.0"
+   },
+   "devDependencies": {
+      "@next/eslint-plugin-next": "^14.2.15",
+      "eslint": "^8",
+      "eslint-config-airbnb": "^19.0.4",
+      "eslint-config-next": "^14.2.4"
+   }
+}

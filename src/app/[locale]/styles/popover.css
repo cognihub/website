@@ -1,0 +1,53 @@
+.Popover {
+    animation: slideIn 0.1s ease-in-out forwards;
+    position: fixed;
+    top: 20px;
+    left: calc(100vw - 280px);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px;
+    border: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: linen;
+    font-weight: bold;
+    background-image: var(--popover-color);
+    box-shadow: var(--shadow);
+}
+
+.ButtonHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.ButtonHeader > div {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.closeNav {
+    font-size: 30px;
+}
+
+.Popover button {
+    color: linen;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

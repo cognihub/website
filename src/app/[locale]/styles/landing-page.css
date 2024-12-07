@@ -1,0 +1,26 @@
+.BlinkIt {
+    animation: blinker 4s ease-in-out infinite;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100vw;
+    z-index: 0;
+}
