@@ -29,6 +29,7 @@ export default function Page() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({ token }),
+                    redirect: "follow"
                 })
 
                 if(response.ok) setIsVerified(true)
