@@ -13,7 +13,7 @@ export default function AdminHeader() {
     const handleBackupClick = async () => {
         setIsLoading(true)
 
-        const result = await fetch('http://localhost:3000/auth/backup')
+        const result = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/auth/backup`)
 
         const blob = await result.blob()
         const filename = 'backup.zip'

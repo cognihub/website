@@ -1,5 +1,15 @@
 .FormButtonContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.FormButtonContainer button:disabled,
+.FormButtonContainer input:disabled {
+    border-color: gray;
+   background-color: gray;
+   color: white;
+   cursor: not-allowed;
+   pointer-events: none;
+   opacity: 0.6;
 }

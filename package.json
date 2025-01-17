@@ -21,6 +21,7 @@
       "next-intl": "latest",
       "react": "^18",
       "react-dom": "^18",
+      "react-google-recaptcha": "^3.1.0",
       "react-multi-select-component": "^4.3.4",
       "react-toastify": "^10.0.6",
       "react-tsparticles": "^2.9.3",
