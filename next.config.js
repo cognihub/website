@@ -44,7 +44,7 @@ const nextConfig = {
           },
           {
             key: "Access-Control-Allow-Methods",
-            value: "POST",
+            value: ["GET", "POST", "OPTIONS"]
           },
           {
             key: "Access-Control-Allow-Headers",
