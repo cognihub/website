@@ -14,7 +14,7 @@ const nextConfig = {
     ],
   },
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   async headers() {
     return [
@@ -27,15 +27,15 @@ const nextConfig = {
           },
           {
             key: "Access-Control-Allow-Methods",
-            value: ["GET", "POST"],
+            value: "GET, POST",
           },
           {
             key: "Access-Control-Allow-Headers",
             value: "Content-Type, Authorization",
           },
         ],
-      }
-    ];
+      },
+    ]
   },
 }
 
