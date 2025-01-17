@@ -22,14 +22,13 @@ export default function Page() {
     const handleCaptchaSubmission = async (token) => {
         try {
             if (token) {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/contact-us/recaptcha`, {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/el/contact-us/recaptcha`, {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ token }),
-                    redirect: "follow"
+                    body: JSON.stringify({ token })                
                 })
 
                 if(response.ok) setIsVerified(true)
