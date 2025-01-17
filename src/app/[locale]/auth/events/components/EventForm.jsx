@@ -159,7 +159,7 @@ export default function EventForm({ serverAction, event }) {
                         placeholder='Επικολλήστε το σύνδεσμο για το υλικό της δράσης'
                         defaultValue={resources}
                     />
-                    <FormButton message={message} placeholder='ΟΛΟΚΛΗΡΩΣΗ'/>
+                    <FormButton message={message} placeholder='ΟΛΟΚΛΗΡΩΣΗ' />
                 </div>
                 <div className={styles.ContentColumn}>
                     <SunEditorForm defaultValue={content} handleContentChange={handleContentChange} />

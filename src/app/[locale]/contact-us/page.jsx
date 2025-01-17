@@ -3,10 +3,10 @@
 import { useFormState } from 'react-dom'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { communicateWithCognihub } from '@/app/actions'
 import { useTheme } from '@/components/Navbar/hooks'
 import FormButton from '@/components/FormButton/FormButton'
-import ReCAPTCHA from 'react-google-recaptcha'
 
 import styles from './ContactUs.module.css'
 import config from '@/lib/config'
@@ -23,15 +23,15 @@ export default function Page() {
         try {
             if (token) {
                 const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/el/contact-us/recaptcha`, {
-                    method: "POST",
+                    method: 'POST',
                     headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ token })                
+                    body: JSON.stringify({ token })
                 })
 
-                if(response.ok) setIsVerified(true)
+                if (response.ok) setIsVerified(true)
                 else throw new Error("Error with our site's end")
             }
         } catch (e) {
@@ -39,7 +39,7 @@ export default function Page() {
             throw e
         }
     }
-    
+
     const handleChange = async (token) => {
         await handleCaptchaSubmission(token)
     }

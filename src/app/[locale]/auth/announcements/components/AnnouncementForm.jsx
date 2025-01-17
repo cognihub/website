@@ -72,7 +72,7 @@ export default function AnnouncementForm({ serverAction, announcement }) {
                         style={{ height: '80px' }}
                         defaultValue={links}
                     />
-                    <FormButton message={message} placeholder='ΟΛΟΚΛΗΡΩΣΗ'/>
+                    <FormButton message={message} placeholder='ΟΛΟΚΛΗΡΩΣΗ' />
                 </div>
                 <div className={styles.ContentColumn}>
                     <SunEditorForm defaultValue={content} handleContentChange={handleContentChange} />

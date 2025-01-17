@@ -23,9 +23,9 @@ async function authorizeRequestAndGetLocalizedResponse(request) {
 
     const unlocalizedUrl = segments.join('/')
 
-    if(metadataFileRequest(unlocalizedUrl)) {
+    if (metadataFileRequest(unlocalizedUrl)) {
         const metadataFileRequest = unlocalizedUrl;
-        return Response.redirect(new URL(`/` + metadataFileRequest, request.url), 308)
+        return Response.redirect(new URL('/' + metadataFileRequest, request.url), 308)
     }
 
     if (!isPageAuthorized(unlocalizedUrl)) return getLocalizedResponse(request)

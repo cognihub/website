@@ -20,22 +20,22 @@ const font = Inter({
 
 export async function generateMetadata() {
     return {
-        title: "Cognihub",
-        description: "The future is interdisciplinary",
-        author: "Evangelos Garaganis",
+        title: 'Cognihub',
+        description: 'The future is interdisciplinary',
+        author: 'Evangelos Garaganis',
         openGraph: {
-            title: "Cognihub",
+            title: 'Cognihub',
             description: "Welcome to Cognihub, the cognitive science's hub that promotes interdisciplinarity, through events, workshops and more.",
             images: [
                 {
-                    url: "/logo.png",
+                    url: '/logo.png',
                     width: 1200,
                     height: 630,
-                    alt: "Our cognilogo",
+                    alt: 'Our cognilogo',
                 }
             ],
-            type: "website",
-            url: "https://website-nine-omega-32.vercel.app",
+            type: 'website',
+            url: 'https://website-nine-omega-32.vercel.app',
         },
     }
 }

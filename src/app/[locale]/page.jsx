@@ -8,20 +8,20 @@ import Partners from '@/components/home/Partners/Partners'
 
 export async function generateMetadata() {
     return {
-        title: "Cognihub",
-        description: "The future is interdisciplinary",
-        author: "Evangelos Garaganis",
+        title: 'Cognihub',
+        description: 'The future is interdisciplinary',
+        author: 'Evangelos Garaganis',
         openGraph: {
-            title: "Cognihub",
+            title: 'Cognihub',
             description: "Welcome to Cognihub, the cognitive science's hub that promotes interdisciplinarity, through events, workshops and more.",
-            type: "website",
-            url: "https://website-nine-omega-32.vercel.app",
+            type: 'website',
+            url: 'https://website-nine-omega-32.vercel.app',
             images: [
                 {
-                    url: "/home.png",
+                    url: '/home.png',
                     width: 1200,
                     height: 630,
-                    alt: "Screenshot of our home page",
+                    alt: 'Screenshot of our home page',
                 }
             ],
         },
