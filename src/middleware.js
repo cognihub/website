@@ -50,18 +50,21 @@ async function authorizeRequestAndGetLocalizedResponse(request) {
 }
 
 export async function middleware(request) {
-    const response = authorizeRequestAndGetLocalizedResponse(request)
-    
-    // add the CORS headers to the response
-    res.headers.append('Access-Control-Allow-Credentials', "true")
-    res.headers.append('Access-Control-Allow-Origin', '*') // replace this your actual origin
-    res.headers.append('Access-Control-Allow-Methods', 'GET,DELETE,PATCH,POST,PUT')
-    res.headers.append(
-        'Access-Control-Allow-Headers',
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-    )
-    
-    return response
+    const response = await authorizeRequestAndGetLocalizedResponse(request);
+
+    const responseWithCORSHeaders = new Response(response.body, response);
+
+    responseWithCORSHeaders.headers.set('Access-Control-Allow-Origin', '*');
+    responseWithCORSHeaders.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    responseWithCORSHeaders.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+    if (request.method === 'OPTIONS') {
+        return new Response(null, {
+            headers: responseWithCORSHeaders.headers,
+        });
+    }
+
+    return responseWithCORSHeaders;
 }
 
 // Routes Middleware should not run on
