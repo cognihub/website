@@ -9,26 +9,41 @@ import { isLoginPage, isPageAuthorized } from './lib/routing'
 
 const handleI18nRouting = createMiddleware(routing)
 
-function getLocalizedResponse(request, urlToRedirect) {
-    if (urlToRedirect) request.nextUrl.pathname = urlToRedirect
-    return handleI18nRouting(request)
+function addCORSHeaders(response) {
+    response.headers.set('Access-Control-Allow-Origin', '*') // Allow all origins change to specific domains in production
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    return response
 }
 
-function metadataFileRequest(pathname) {
-    return (pathname === 'robots.txt' || pathname === 'sitemap.xml')
+function getLocalizedResponse(request, urlToRedirect) {
+    if (urlToRedirect) {
+        const url = new URL(request.url)
+        url.pathname = urlToRedirect
+        return addCORSHeaders(handleI18nRouting({ ...request, nextUrl: url }))
+    }
+    return addCORSHeaders(handleI18nRouting(request))
+}
+
+function isMetadataFileRequest(pathname) {
+    return pathname === 'robots.txt' || pathname === 'sitemap.xml'
 }
 
 async function authorizeRequestAndGetLocalizedResponse(request) {
-    const [, locale, ...segments] = request.nextUrl.pathname.split('/')
+    const { pathname } = request.nextUrl
 
-    const unlocalizedUrl = segments.join('/')
-
-    if (metadataFileRequest(unlocalizedUrl)) {
-        const metadataFileRequest = unlocalizedUrl;
-        return Response.redirect(new URL('/' + metadataFileRequest, request.url), 308)
+    if (isMetadataFileRequest(pathname)) {
+        return addCORSHeaders(
+            Response.redirect(new URL(`/${pathname}`, request.url), 308)
+        )
     }
 
-    if (!isPageAuthorized(unlocalizedUrl)) return getLocalizedResponse(request)
+    const [, locale, ...segments] = pathname.split('/')
+    const unlocalizedUrl = segments.join('/')
+
+    if (!isPageAuthorized(unlocalizedUrl)) {
+        return getLocalizedResponse(request)
+    }
 
     const userIsLoggedIn = isUserLoggedIn()
 
@@ -38,19 +53,25 @@ async function authorizeRequestAndGetLocalizedResponse(request) {
             : getLocalizedResponse(request)
     }
 
-    // If request reaches here, it means we are on an authorized page
     try {
         const response = getLocalizedResponse(request)
-        return await setResponseToUpdateSessionCookieOrThrowError(response)
-    } catch (e) {
-        return setResponseToDeleteCookie(
-            getLocalizedResponse(request, '/auth/login'),
+        return addCORSHeaders(
+            await setResponseToUpdateSessionCookieOrThrowError(response)
+        )
+    } catch (error) {
+        return addCORSHeaders(
+            setResponseToDeleteCookie(getLocalizedResponse(request, '/auth/login'))
         )
     }
 }
 
 export async function middleware(request) {
-    return authorizeRequestAndGetLocalizedResponse(request)
+    if (request.method === 'OPTIONS') {
+        const response = new Response(null, { status: 204 }) // No Content response
+        return addCORSHeaders(response)
+    }
+
+    return await authorizeRequestAndGetLocalizedResponse(request)
 }
 
 // Routes Middleware should not run on

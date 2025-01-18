@@ -23,7 +23,7 @@ const nextConfig = {
             headers: [
                {
                   key: "Access-Control-Allow-Origin",
-                  value: "cognihub.gr",
+                  value: "*",
                },
                {
                   key: "Access-Control-Allow-Methods",
