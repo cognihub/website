@@ -61,6 +61,9 @@ async function authorizeRequestAndGetLocalizedResponse(request) {
 }
 
 export async function middleware(request) {
+    const response2 = authorizeRequestAndGetLocalizedResponse(request)
+
+    console.log("1")
    // Check the origin from the request
    const origin = request.headers.get("origin") ?? ""
    const isAllowedOrigin = allowedOrigins.includes(origin)
@@ -76,17 +79,28 @@ export async function middleware(request) {
       return NextResponse.json({}, { headers: preflightHeaders })
    }
 
+   console.log("2")
+   
    const response = authorizeRequestAndGetLocalizedResponse(request)
+   return response
    const responseWithCORSHeaders = new Response(response.body, response);
 
+   console.log("3")
 
    if (isAllowedOrigin) {
     responseWithCORSHeaders.headers.set("Access-Control-Allow-Origin", origin)
    }
 
+   console.log({response})
+   console.log("4")
+
    Object.entries(corsOptions).forEach(([key, value]) => {
     responseWithCORSHeaders.headers.set(key, value)
    })
+
+   console.log("5")
+
+   console.log({responseWithCORSHeaders})
 
    return responseWithCORSHeaders
 }
