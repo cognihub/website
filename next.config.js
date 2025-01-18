@@ -19,15 +19,15 @@ const nextConfig = {
    async headers() {
       return [
          {
-            source: "/auth/:path*",
+            source: "/:path*",
             headers: [
                {
                   key: "Access-Control-Allow-Origin",
-                  value: "*",
+                  value: "cognihub.gr",
                },
                {
                   key: "Access-Control-Allow-Methods",
-                  value: "GET",
+                  value: "GET, POST, PUT, DELETE, OPTIONS",
                },
                {
                   key: "Access-Control-Allow-Headers",
