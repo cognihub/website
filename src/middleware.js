@@ -1,85 +1,102 @@
-import createMiddleware from 'next-intl/middleware'
+import createMiddleware from "next-intl/middleware"
 import {
-    isUserLoggedIn,
-    setResponseToDeleteCookie,
-    setResponseToUpdateSessionCookieOrThrowError,
-} from './lib/auth'
-import { routing } from './i18n/routing'
-import { isLoginPage, isPageAuthorized } from './lib/routing'
+   isUserLoggedIn,
+   setResponseToDeleteCookie,
+   setResponseToUpdateSessionCookieOrThrowError,
+} from "./lib/auth"
+import { routing } from "./i18n/routing"
+import { isLoginPage, isPageAuthorized } from "./lib/routing"
+import { NextResponse } from "next/server"
+
+const allowedOrigins = ["*"]
+
+const corsOptions = {
+   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+   "Access-Control-Allow-Headers": "Content-Type, Authorization",
+}
 
 const handleI18nRouting = createMiddleware(routing)
 
-function addCORSHeaders(response) {
-    response.headers.set('Access-Control-Allow-Origin', '*') // Allow all origins change to specific domains in production
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-    return response
-}
-
 function getLocalizedResponse(request, urlToRedirect) {
-    if (urlToRedirect) {
-        const url = new URL(request.url)
-        url.pathname = urlToRedirect
-        return addCORSHeaders(handleI18nRouting({ ...request, nextUrl: url }))
-    }
-    return addCORSHeaders(handleI18nRouting(request))
+   if (urlToRedirect) request.nextUrl.pathname = urlToRedirect
+   return handleI18nRouting(request)
 }
 
-function isMetadataFileRequest(pathname) {
-    return pathname === 'robots.txt' || pathname === 'sitemap.xml'
+function metadataFileRequest(pathname) {
+   return pathname === "robots.txt" || pathname === "sitemap.xml"
 }
 
 async function authorizeRequestAndGetLocalizedResponse(request) {
-    const { pathname } = request.nextUrl
+   const [, locale, ...segments] = request.nextUrl.pathname.split("/")
 
-    if (isMetadataFileRequest(pathname)) {
-        return addCORSHeaders(
-            Response.redirect(new URL(`/${pathname}`, request.url), 308)
-        )
-    }
+   const unlocalizedUrl = segments.join("/")
 
-    const [, locale, ...segments] = pathname.split('/')
-    const unlocalizedUrl = segments.join('/')
+   if (metadataFileRequest(unlocalizedUrl)) {
+      const metadataFileRequest = unlocalizedUrl
+      return Response.redirect(
+         new URL("/" + metadataFileRequest, request.url),
+         308
+      )
+   }
 
-    if (!isPageAuthorized(unlocalizedUrl)) {
-        return getLocalizedResponse(request)
-    }
+   if (!isPageAuthorized(unlocalizedUrl)) return getLocalizedResponse(request)
 
-    const userIsLoggedIn = isUserLoggedIn()
+   const userIsLoggedIn = isUserLoggedIn()
 
-    if (isLoginPage(unlocalizedUrl)) {
-        return userIsLoggedIn
-            ? getLocalizedResponse(request, '/auth/admin')
-            : getLocalizedResponse(request)
-    }
+   if (isLoginPage(unlocalizedUrl)) {
+      return userIsLoggedIn
+         ? getLocalizedResponse(request, "/auth/admin")
+         : getLocalizedResponse(request)
+   }
 
-    try {
-        const response = getLocalizedResponse(request)
-        return addCORSHeaders(
-            await setResponseToUpdateSessionCookieOrThrowError(response)
-        )
-    } catch (error) {
-        return addCORSHeaders(
-            setResponseToDeleteCookie(getLocalizedResponse(request, '/auth/login'))
-        )
-    }
+   // If request reaches here, it means we are on an authorized page
+   try {
+      const response = getLocalizedResponse(request)
+      return await setResponseToUpdateSessionCookieOrThrowError(response)
+   } catch (e) {
+      return setResponseToDeleteCookie(
+         getLocalizedResponse(request, "/auth/login")
+      )
+   }
 }
 
 export async function middleware(request) {
-    if (request.method === 'OPTIONS') {
-        const response = new Response(null, { status: 204 }) // No Content response
-        return addCORSHeaders(response)
-    }
+   // Check the origin from the request
+   const origin = request.headers.get("origin") ?? ""
+   const isAllowedOrigin = allowedOrigins.includes(origin)
 
-    return await authorizeRequestAndGetLocalizedResponse(request)
+   // Handle preflighted requests
+   const isPreflight = request.method === "OPTIONS"
+
+   if (isPreflight) {
+      const preflightHeaders = {
+         ...(isAllowedOrigin && { "Access-Control-Allow-Origin": origin }),
+         ...corsOptions,
+      }
+      return NextResponse.json({}, { headers: preflightHeaders })
+   }
+
+   const response = authorizeRequestAndGetLocalizedResponse(request)
+   const responseWithCORSHeaders = new Response(response.body, response);
+
+
+   if (isAllowedOrigin) {
+    responseWithCORSHeaders.headers.set("Access-Control-Allow-Origin", origin)
+   }
+
+   Object.entries(corsOptions).forEach(([key, value]) => {
+    responseWithCORSHeaders.headers.set(key, value)
+   })
+
+   return responseWithCORSHeaders
 }
 
 // Routes Middleware should not run on
 export const config = {
-    matcher: [
-        '/((?!api|_next/static|_next/image|robots.txt|sitemap.xml|.*\\.png$|.*\\.svg$|.*\\.ico$|.*\\.jpg$|.*\\.gif$).*)',
-        '/',
-        '/(el|en)/:path*',
-        '/((?!_next|_vercel|.*\\..*).*)',
-    ],
+   matcher: [
+      "/((?!api|_next/static|_next/image|robots.txt|sitemap.xml|.*\\.png$|.*\\.svg$|.*\\.ico$|.*\\.jpg$|.*\\.gif$).*)",
+      "/",
+      "/(el|en)/:path*",
+      "/((?!_next|_vercel|.*\\..*).*)",
+   ],
 }

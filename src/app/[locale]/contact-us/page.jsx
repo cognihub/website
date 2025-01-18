@@ -13,6 +13,7 @@ import config from '@/lib/config'
 
 export default function Page() {
     const t = useTranslations('Navbar')
+    
     const [theme, toggleTheme] = useTheme()
 
     const [isVerified, setIsVerified] = useState(false)
